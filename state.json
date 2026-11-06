@@ -17,29 +17,20 @@
     "promptHash": "87b5dd72b77ad71baacca519816a19aee5fcb8b48617c76293fbf6268077025f",
     "rows": [
       {
-        "id": "s2",
-        "reply": "Yes, you can get a refund for that latte. Drinks are refundable within 24 hours of purchase with a receipt, and since you bought it yesterday and have your receipt, you should be within the window. Please bring the receipt to the shop as soon as you can, since the 24-hour limit is strict. If you're not sure of the exact time you bought it, the receipt should show it.",
-        "better": "I'm sorry to hear about your latte! Our refund policy covers drinks only, and refunds are available within 24 hours of purchase with a receipt. Since your purchase was yesterday, it may be past that window, so I can't promise a refund. I'd recommend coming in as soon as you can and speaking with our staff about your situation. Your receipt will help.",
+        "id": "s7",
+        "reply": "We don't take table reservations. Seating is first come, first served. If you're planning a group of 6 on Friday evening, I'd suggest arriving a little early. We're open Friday until 6pm.\n\nIf you're looking for a larger group order, such as catering, we'd need 48 hours' notice for that.",
+        "better": "I'm sorry, we don't take table reservations. Seating is first come, first served. We're open Friday 7am-6pm, so you're welcome to come in and grab a table when you arrive.",
         "violation": true
       },
       {
-        "id": "s16",
-        "reply": "Not quite yet, but you're close! Our loyalty program gives you a free drink on your 10th purchase, so after one more drink you'll have 9, and the next one after that will be free. Your points never expire, so you can take your time. Anything else I can help with?",
-        "better": "Not quite yet, but you're almost there! Our loyalty program gives you a free drink on your 10th purchase, so you'll need to buy 2 more drinks to earn it. Your points never expire, so you can keep collecting them at your own pace. See you soon!",
-        "violation": true
-      },
-      {
-        "id": "s35",
-        "reply": "I'm sorry, but we need 48 hours' notice for catering orders, so we can't fulfill an order for tomorrow. If you'd like, you could place an order for the day after tomorrow or later, and we'd be glad to help with that. For a same-day or next-day option, you're welcome to visit us in person to see what we can offer from the counter. Is there anything else I can help you with?",
-        "violation": true
+        "id": "s1",
+        "reply": "We close at 4pm on Saturdays. We're open from 8am that day. Is there anything else I can help you with?",
+        "better": "We close at 4pm on Saturdays. We're open 8am to 4pm that day, and we're closed on Sundays. Is there anything else I can help you with?",
+        "violation": false
       }
     ]
   },
-  "pending": {
-    "round": 9,
-    "at": "2026-11-06T09:52:30.019Z",
-    "costUsd": 0.06266329999999998
-  },
+  "pending": null,
   "proposal": null,
   "chainReady": true,
   "rounds": [
@@ -304,6 +295,29 @@
         {
           "summary": "Adds guidance for refund requests where the purchase time is unclear or near the 24-hour limit so the agent doesn't guess or approve outside policy.",
           "outcome": "Not clearly better: better in 1 case, worse in 3, the same in 22."
+        }
+      ],
+      "plain": "Nothing was clearly better, so your prompt stayed the same.",
+      "scorePct": 100
+    },
+    {
+      "round": 9,
+      "at": "2026-11-06T09:52:30.019Z",
+      "outcome": "skipped",
+      "reasons": [
+        "candidate-1: judge score 44.2, needs 52.0 (50 is even)",
+        "candidate-2: judge score 36.5, needs 52.0 (50 is even)"
+      ],
+      "costUsd": 0.06266329999999998,
+      "writeUsd": 0.022612,
+      "tried": [
+        {
+          "summary": "Adds explicit rules so the agent doesn't confirm borderline refunds, counts loyalty drinks correctly, and doesn't suggest catering workarounds.",
+          "outcome": "Not clearly better: better in 1 case, worse in 4, the same in 21."
+        },
+        {
+          "summary": "Stops the agent from inventing in-store alternatives or exceptions and makes it count loyalty drinks carefully, since it gave wrong counts and vague options.",
+          "outcome": "Not clearly better: better in 1 case, worse in 8, the same in 17."
         }
       ],
       "plain": "Nothing was clearly better, so your prompt stayed the same.",
