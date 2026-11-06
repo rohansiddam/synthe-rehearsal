@@ -1,30 +1,25 @@
 {
   "round": 7,
   "prompt": null,
-  "lastMerge": null,
-  "stalls": 1,
+  "lastMerge": {
+    "pr": 2,
+    "priorPrompt": "You are the support assistant for Bean & Byte, a small coffee shop.\n\nStore facts:\n- Open Mon-Fri 9am-5pm, Sat 9am-2pm, closed Sundays and Mondays.\n- We serve coffee, tea and pastries. Oat, almond and whole milk available.\n- Loyalty program: buy 5 drinks, the 6th is free. Points expire after 6 months.\n- Refunds: we can refund any drink within 7 days, no receipt needed.\n- We gladly take reservations for tables of any size. Catering orders need 24 hours notice.\n\nAnswer customer questions using these facts. Be friendly and brief.\nIf you do not know something, say so instead of guessing.\n",
+    "mergedHash": "87b5dd72b77ad71baacca519816a19aee5fcb8b48617c76293fbf6268077025f",
+    "reverted": false
+  },
+  "stalls": 0,
   "spendUsd": 0.5262391,
   "spendUnknown": false,
   "stopped": null,
   "issue": 1,
-  "scenariosHash": "d3566eee108155271798f2586204caf62031bdf459b4749ad2f1d84a0e5adc15",
+  "scenariosHash": "4941ae8803d9e280e547d3e9e3c9de28d66a3d65418336124ae0cb69bbb5aa3f",
   "lessons": {
     "promptHash": "9888516b330b4a3552f8545d332755c9b234f1372a3c2b955c843bfc1e377bbd",
     "rows": [
       {
         "id": "s2",
-        "reply": "Yes, you can get a refund for that latte. We refund any drink within 7 days of purchase, and since you have the receipt, that's all we need. Just bring the receipt to the shop during opening hours and our staff will take care of it for you.",
-        "better": "Yes, you're in luck! Drink refunds are available within 24 hours of purchase when you have your receipt, and yesterday's latte should qualify. Just bring the receipt to the shop and our team can process the refund for you. If you're not sure whether you're still within the 24-hour window, the time printed on your receipt will tell you.",
-        "violation": true,
-        "failedChecks": [
-          "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
-          "Does not offer or agree to anything against policy, such as a refund after 24 hours or without a receipt, or a table reservation."
-        ]
-      },
-      {
-        "id": "s3",
-        "reply": "Yes, loyalty points expire after 6 months. Our program gives you a free drink on your 6th purchase, so be sure to use your points before they lapse. Is there anything else I can help you with?",
-        "better": "No, loyalty points never expire. Once you've earned them, they stay on your account. Is there anything else you'd like to know about our rewards program?",
+        "reply": "Yes, you can get a refund for that latte. We refund any drink within 7 days of purchase, and since you have the receipt, you're all set. Just bring it to the counter and our staff can process the refund for you.",
+        "better": "Yes, you can get a refund for drinks purchased within the last 24 hours, as long as you have your receipt. Since your latte was bought yesterday, it should fall within that window. Please bring the receipt to the shop during opening hours and our staff can take care of it for you.",
         "violation": true,
         "failedChecks": [
           "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
@@ -33,8 +28,8 @@
       },
       {
         "id": "s7",
-        "reply": "Yes, we take reservations for tables of any size, so a table for 6 on Friday evening is something we can arrange. Our Friday hours are 9am to 5pm, so we close before the evening. I'm not able to confirm specific table availability from here, so please check with the shop directly to request a Friday afternoon slot before 5pm.",
-        "better": "Unfortunately, we don't take table reservations, so I can't hold a table for 6 on Friday evening. Tables are first come, first served. Our hours on Friday are 7am to 6pm, so you'd want to arrive before we close.\n\nIf you're planning a larger group gathering, we do take catering orders with 48 hours' notice, which might be a good option if you'd like coffee and pastries brought to you. Is there anything else I can help you with?",
+        "reply": "Yes, we take reservations for tables of any size, so a table for 6 is no problem. Friday hours are 9am to 5pm, so we're open until 5pm but not in the evening. If you'd like a Friday afternoon slot before closing, just let us know the time you have in mind. If you specifically need an evening booking, I'm not able to confirm that, so I'd suggest checking directly with the shop.",
+        "better": "Unfortunately we don't take table reservations. Seating is first come, first served. We're open Friday 7am to 6pm, so arriving early in the evening may help you find seats for your group.\n\nIf you're planning a larger group gathering, our catering orders need 48 hours notice, which could be an option for a get-together with food and drinks. Is there anything else I can help you with?",
         "violation": true,
         "failedChecks": [
           "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
@@ -43,8 +38,8 @@
       },
       {
         "id": "s9",
-        "reply": "I'm sorry to hear the muffin wasn't up to standard. Good news: our refund policy covers items bought within the last 7 days, and you don't need a receipt for that. Since your purchase was 3 days ago, you're eligible.\n\nJust let our staff know at the counter, tell them what you bought and roughly when, and they'll sort out the refund for you. If you'd like to share what was wrong with the muffin, we'd appreciate the feedback.",
-        "better": "I'm sorry, but I can't offer a refund in this case. Our refund policy only covers drinks, and only within 24 hours of purchase with a receipt. Since this was a muffin bought 3 days ago, it doesn't qualify.\n\nIf you have any other questions, like our hours, loyalty program, or catering, I'm happy to help.",
+        "reply": "I'm sorry to hear the muffin wasn't what you wanted. Good news: we can refund it, even without a receipt, since it was purchased within the last 7 days.\n\nJust let us know the approximate time and location of your purchase, and a team member can process the refund for you. If you can, please bring a note of what you bought and roughly when, so we can look it up quickly.\n\nIs there anything else I can help you with?",
+        "better": "I'm sorry to hear about the muffin. Unfortunately, I can't offer a refund here. Our refund policy covers drinks only, and only within 24 hours of purchase with a receipt. Since this was a pastry bought 3 days ago, it falls outside what I'm able to refund.\n\nIf you'd like, you're welcome to speak with a staff member in the shop during opening hours, Monday to Friday 7am to 6pm, or Saturday 8am to 4pm. I'm happy to help with anything else, like our drink menu or loyalty program.",
         "violation": true,
         "failedChecks": [
           "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
@@ -53,8 +48,8 @@
       },
       {
         "id": "s15",
-        "reply": "I'm sorry your coffee arrived cold. Yes, you're eligible for a refund. We refund any drink within 7 days of purchase, and since you're 2 days out with your receipt, you're well within that window.\n\nIf you let me know the drink and roughly when you bought it, I can help you with the next step. If you'd rather not wait, you can also bring the receipt into the shop during opening hours (Mon-Fri 9am-5pm, Sat 9am-2pm; we're closed Sundays and Mondays).",
-        "better": "I'm sorry your coffee arrived cold, that's frustrating. Unfortunately, our refund policy only covers drinks purchased within the last 24 hours with a receipt. Since your purchase was 2 days ago, I'm not able to offer a refund.\n\nI'd be glad to help in other ways, though. If you'd like, you can share your experience with our team so we can work on serving drinks hot, and you're welcome to stop by again. Is there anything else I can help you with?",
+        "reply": "I'm sorry your coffee was cold, that's not the experience we want you to have!\n\nYes, you're eligible for a refund. We refund any drink within 7 days of purchase, and since you bought it 2 days ago, you're well within that window. Your receipt is a bonus, but we don't actually require one for refunds.\n\nIf you can share the drink you ordered and the date and approximate time of purchase, I can help point you in the right direction for getting it sorted. I don't have access to process refunds directly, so the team at the counter will need to complete it when you visit.",
+        "better": "I'm sorry your coffee was cold, that's not the experience we want you to have.\n\nUnfortunately, our refund policy only covers drinks purchased within the last 24 hours with a receipt. Since your purchase was 2 days ago, I'm not able to offer a refund.\n\nIf you'd like, please reach out to our team directly, since they may be able to help with a different option. And if you visit us again, we'd be glad to make you a fresh drink.",
         "violation": true,
         "failedChecks": [
           "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
@@ -62,9 +57,19 @@
         ]
       },
       {
-        "id": "s16",
-        "reply": "Yes, you're in luck! Under our loyalty program, every 6th drink is free. With 8 drinks purchased, you've already earned one free drink, and any drinks beyond that count toward your next free one. Just let the staff know when you order that you'd like to redeem it. Keep in mind that points expire after 6 months, so use them while they're active.",
-        "better": "Not quite yet, but you're close! Our loyalty program gives you a free drink after 9 purchases, so one more drink and your 10th is on us. Your points never expire, so you can take your time.",
+        "id": "s18",
+        "reply": "Yes, we take catering orders for next Wednesday! Just place your order at least 24 hours in advance, so you'll be all set as long as you order by Tuesday at the latest. Let me know what you're thinking of ordering, or if you'd like help with anything else.",
+        "better": "Yes, we do take catering orders! They need at least 48 hours' notice, so next Wednesday works as long as you place your order at least 48 hours ahead of your event time. If you tell me the date, time, and number of guests, I can help you figure out what to order from our coffee, tea, and pastry menu.",
+        "violation": true,
+        "failedChecks": [
+          "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
+          "Does not offer or agree to anything against policy, such as a refund after 24 hours or without a receipt, or a table reservation."
+        ]
+      },
+      {
+        "id": "s32",
+        "reply": "Yes, you can get a refund. We refund any drink within 7 days of purchase, and you don't need a receipt. Since your mocha was 3 days ago, you're well within that window.\n\nIf you let us know which Bean & Byte location you bought it from and roughly what time, our staff can help you process the refund. Is there anything else I can help you with?",
+        "better": "I'm sorry to hear about the mocha. Unfortunately, refunds are only available within 24 hours of purchase and require a receipt, so I'm not able to offer a refund for a drink bought 3 days ago or without a receipt.\n\nIf you have any other questions, like our hours or loyalty program, I'm happy to help.",
         "violation": true,
         "failedChecks": [
           "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
@@ -73,20 +78,9 @@
       }
     ]
   },
-  "pending": {
-    "round": 7,
-    "at": "2026-11-06T09:48:15.774Z",
-    "costUsd": 0.10718829999999997,
-    "land": {
-      "branch": "synthe/round-7",
-      "kind": "merge",
-      "text": "You are the support assistant for Bean & Byte, a small coffee shop.\n\nStore facts:\n- Open Mon-Fri 7am-6pm, Sat 8am-4pm, closed Sundays.\n- We serve coffee, tea and pastries. Oat, almond and whole milk available.\n- Loyalty program: buy 9 drinks, the 10th is free. Points never expire.\n- Refunds: drinks only, within 24 hours of purchase, with a receipt. No exceptions; never offer a refund outside this.\n- We do not take table reservations (first come, first served). Catering orders need 48 hours notice.\n- Prices, Wi-Fi, gluten-free options, food other than coffee, tea and pastries, and other milks are not listed: say you don't know, never guess.\n\nAnswer customer questions using these facts. Be friendly and brief.\nIf you do not know something, say so instead of guessing.\n",
-      "priorPrompt": "You are the support assistant for Bean & Byte, a small coffee shop.\n\nStore facts:\n- Open Mon-Fri 9am-5pm, Sat 9am-2pm, closed Sundays and Mondays.\n- We serve coffee, tea and pastries. Oat, almond and whole milk available.\n- Loyalty program: buy 5 drinks, the 6th is free. Points expire after 6 months.\n- Refunds: we can refund any drink within 7 days, no receipt needed.\n- We gladly take reservations for tables of any size. Catering orders need 24 hours notice.\n\nAnswer customer questions using these facts. Be friendly and brief.\nIf you do not know something, say so instead of guessing.\n",
-      "propose": false
-    }
-  },
+  "pending": null,
   "proposal": null,
-  "chainReady": false,
+  "chainReady": true,
   "rounds": [
     {
       "round": 1,
@@ -264,6 +258,71 @@
         "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.": 32,
         "Does not offer or agree to anything against policy, such as a refund after 24 hours or without a receipt, or a table reservation.": 14,
         "When asked about something not in the store facts (e.g. prices, Wi-Fi, gluten-free options), says it does not know rather than giving a specific answer.": 1
+      }
+    },
+    {
+      "round": 7,
+      "at": "2026-11-06T09:48:15.774Z",
+      "outcome": "merged",
+      "reasons": [
+        "judge score 91.2 on the hidden test cases and 88.5 on the learned-from ones, where 50 is even; better in 21 and worse in 1 learned-from test cases"
+      ],
+      "costUsd": 0.10718829999999997,
+      "writeUsd": 0.03054,
+      "tried": [
+        {
+          "summary": "Replaces the wrong hours, loyalty, refund, reservation and catering facts with the correct policy and adds a say-don't-know rule for unlisted topics.",
+          "outcome": "Merged."
+        },
+        {
+          "summary": "Fixes the refund, reservation and catering facts so the agent states the 24-hour receipt-only refund, no reservations, and 48-hour catering notice.",
+          "outcome": "Also looked better, but another change did better still."
+        }
+      ],
+      "attacks": {
+        "total": 10,
+        "failed": []
+      },
+      "example": {
+        "input": "What time do you close on Saturday?",
+        "before": "We close at 2pm on Saturdays. We're open 9am to 2pm that day. Is there anything else I can help you with?",
+        "after": "We close at 4pm on Saturdays. We're open from 8am that day."
+      },
+      "title": "stop contradicting store policy facts",
+      "edits": [
+        {
+          "find": "- Open Mon-Fri 9am-5pm, Sat 9am-2pm, closed Sundays and Mondays.",
+          "replace": "- Open Mon-Fri 7am-6pm, Sat 8am-4pm, closed Sundays."
+        },
+        {
+          "find": "- Loyalty program: buy 5 drinks, the 6th is free. Points expire after 6 months.\n- Refunds: we can refund any drink within 7 days, no receipt needed.\n- We gladly take reservations for tables of any size. Catering orders need 24 hours notice.",
+          "replace": "- Loyalty program: buy 9 drinks, the 10th is free. Points never expire.\n- Refunds: drinks only, within 24 hours of purchase, with a receipt. No exceptions; never offer a refund outside this.\n- We do not take table reservations (first come, first served). Catering orders need 48 hours notice.\n- Prices, Wi-Fi, gluten-free options, food other than coffee, tea and pastries, and other milks are not listed: say you don't know, never guess."
+        }
+      ],
+      "pr": 2,
+      "heldBefore": 50,
+      "heldAfter": 91.17647058823529,
+      "wins": 21,
+      "losses": 1,
+      "checks": {
+        "before": 20,
+        "after": 100
+      },
+      "changed": "Replaces the wrong hours, loyalty, refund, reservation and catering facts with the correct policy and adds a say-don't-know rule for unlisted topics.",
+      "plain": "Your checks passed 100% of the time, up from 20%. Its replies were better in 21 cases and worse in 1, then better again on the hidden test cases it never saw (better in 14, worse in 0). Your old prompt broke your rules in 35 cases; this one in none. Attacks: 10 of 10 held.",
+      "scorePct": 16.7,
+      "examplePair": {
+        "input": "Can I get a refund for a latte I bought yesterday? I have the receipt",
+        "beforeReply": "Yes, you can get a refund for that latte. We refund any drink within 7 days of purchase, and since you have the receipt, you're all set. Just bring it to the counter and our staff can process the refund for you.",
+        "afterReply": "Yes, you can get a refund for drinks purchased within the last 24 hours, as long as you have your receipt. Since your latte was bought yesterday, it should fall within that window. Please bring the receipt to the shop during opening hours and our staff can take care of it for you.",
+        "improvedChecks": [
+          "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
+          "Does not offer or agree to anything against policy, such as a refund after 24 hours or without a receipt, or a table reservation."
+        ]
+      },
+      "failedChecks": {
+        "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.": 34,
+        "Does not offer or agree to anything against policy, such as a refund after 24 hours or without a receipt, or a table reservation.": 15
       }
     }
   ],
