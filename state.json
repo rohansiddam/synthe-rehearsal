@@ -10,57 +10,59 @@
   "stalls": 2,
   "spendUsd": 0.8333265000000001,
   "spendUnknown": false,
-  "stopped": null,
+  "stopped": "reached 12 rounds",
   "issue": 1,
   "scenariosHash": "99138a9218968708a49858dd842cbc2117464f2a285e9673a232bb33cd09e47a",
   "lessons": {
     "promptHash": "87b5dd72b77ad71baacca519816a19aee5fcb8b48617c76293fbf6268077025f",
     "rows": [
       {
-        "id": "s15",
-        "reply": "I'm sorry your coffee arrived cold. Unfortunately, refunds are only available within 24 hours of purchase, so a drink bought 2 days ago isn't eligible, even with the receipt.\n\nI'd still recommend speaking with a manager at the shop, since they may be able to help with the situation in other ways. We're open Monday to Friday 7am to 6pm and Saturday 8am to 4pm (closed Sundays). If you'd like, I can also tell you about our loyalty program, which gives you a free drink after every 9 you buy.",
-        "better": "I'm sorry your coffee was cold. Our refund policy covers drinks only, and only within 24 hours of purchase with a receipt. Since your purchase was 2 days ago, it falls outside that window, so I'm not able to offer a refund.",
+        "id": "s33",
+        "reply": "I'm sorry, we don't take table reservations. Seating is first come, first served. Our hours on Friday are 7am to 6pm, so an evening visit isn't possible that day.\n\nIf you'd like coffee and pastries for your group, we'd be happy to help with a catering order, which needs 48 hours' notice. Is there anything else I can help you with?",
+        "better": "We don't take table reservations at Bean & Byte. Seating is first come, first served. We're open Friday 7am to 6pm, so you're welcome to come in and see whether a table for 6 is free.\n\nIf you're planning a larger group order, such as catering, we need 48 hours notice for those.",
         "violation": true
       },
       {
-        "id": "s16",
-        "reply": "Not quite yet, but you're close! Our loyalty program gives you a free drink on your 10th purchase, so one more drink after your 8th and then one more after that will get you there. Your points never expire, so you can take your time. Anything else I can help with?",
-        "better": "Almost! With 8 drinks on your card, you need one more paid drink to reach 9. Then your 10th drink is free. Points never expire, so you can keep building toward it whenever you're in.",
+        "id": "s45",
+        "reply": "I'm sorry, but we only offer oat, almond and whole milk for drinks, so soy and coconut aren't available. Would you like one of those instead, or would you like help with anything else?",
+        "better": "We offer oat, almond and whole milk. I don't have information about soy or coconut milk, so I'm not able to confirm whether we carry them.",
         "violation": true
-      },
-      {
-        "id": "s1",
-        "reply": "We close at 4pm on Saturdays. We're open from 8am that day. Is there anything else I can help you with?",
-        "better": "We close at 4pm on Saturdays. We're open 8am to 4pm that day. Is there anything else I can help you with?",
-        "violation": false
       },
       {
         "id": "s3",
-        "reply": "No, loyalty points never expire. Once you earn them, they stay on your account.",
-        "better": "No, loyalty points never expire. Once you've bought 9 drinks, your 10th is free.",
+        "reply": "No, loyalty points never expire. Once you've earned them, they stay on your account for as long as you keep using the program.",
+        "better": "No, loyalty points never expire at Bean & Byte. Buy 9 drinks and your 10th is free.",
+        "violation": false,
+        "failedChecks": [
+          "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers."
+        ]
+      },
+      {
+        "id": "s16",
+        "reply": "Not quite yet, but you're close! Our loyalty program gives you a free drink on your 10th purchase, so one more drink after your 8th and you'll be at 9, and the next one after that will be free. Your points never expire, so you can take your time. Is there anything else I can help you with?",
+        "better": "You're one drink away! Buy one more paid drink and your next one after that (your 10th) is free. Points never expire, so you can take your time.",
+        "violation": false,
+        "failedChecks": [
+          "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers."
+        ]
+      },
+      {
+        "id": "s2",
+        "reply": "Yes, you can get a refund on a drink if it was bought within the last 24 hours and you have your receipt. Since your latte was bought yesterday, you should be within that window. Please bring the receipt to the shop during opening hours and our staff can process it for you. Refunds are for drinks only, so this would apply to the latte.",
+        "better": "Yes, you're within our refund window. Drinks can be refunded within 24 hours of purchase with a receipt, so since you bought the latte yesterday and have the receipt, you're eligible. Please bring the receipt to the shop to request your refund.",
         "violation": false
       },
       {
-        "id": "s7",
-        "reply": "Unfortunately, we don't take table reservations. We operate on a first come, first served basis. We're open Friday 7am-6pm, so you're welcome to come in and grab a table when you arrive.\n\nIf you're planning a larger group gathering, we do take catering orders with 48 hours' notice. Is there anything else I can help you with?",
-        "better": "Sorry, we don't take table reservations. We operate on a first come, first served basis. Our Friday hours are 7am to 6pm, so you're welcome to come in and grab a seat when you arrive. If you're planning a larger group visit, you might want to come in earlier in the day when it may be less busy.",
-        "violation": false
-      },
-      {
-        "id": "s34",
-        "reply": "Our loyalty program works like this: buy 9 drinks, and your 10th drink is free. Points never expire, so your progress will be there whenever you come back.",
-        "better": "Our loyalty program works like this: buy 9 drinks and the 10th is free. Points never expire, so your progress stays put even if it's been a while since your last visit.\n\nSo you'd need 9 paid drinks before your next one is free. If you've already bought some, let us know how many and I can tell you how many more you'd need.",
+        "id": "s18",
+        "reply": "Yes, we do take catering orders! They need 48 hours' notice, so as long as you place yours at least two days before next Wednesday, we can arrange it. Would you like help with anything else about your order?",
+        "better": "Yes! Catering orders are available with 48 hours' notice, so next Wednesday works as long as you place your order at least 48 hours before the time you need it. If you tell me the date, time, and number of people, I can help you with the details.",
         "violation": false
       }
     ]
   },
-  "pending": {
-    "round": 12,
-    "at": "2026-11-06T23:05:18.184Z",
-    "costUsd": 0.06525030000000004
-  },
+  "pending": null,
   "proposal": null,
-  "chainReady": true,
+  "chainReady": false,
   "rounds": [
     {
       "round": 1,
@@ -399,6 +401,32 @@
       ],
       "plain": "Nothing was clearly better, so your prompt stayed the same.",
       "scorePct": 100
+    },
+    {
+      "round": 12,
+      "at": "2026-11-06T23:05:18.184Z",
+      "outcome": "skipped",
+      "reasons": [
+        "candidate-1: judge score 50.0, needs 52.0 (50 is even)",
+        "candidate-2: judge score 50.0, needs 52.0 (50 is even)"
+      ],
+      "costUsd": 0.06525030000000004,
+      "writeUsd": 0.023446,
+      "tried": [
+        {
+          "summary": "Stops refund declines from adding invented manager suggestions and extras, and gives a clear formula for loyalty drink counts.",
+          "outcome": "Not clearly better: better in 5 cases, worse in 5, the same in 18."
+        },
+        {
+          "summary": "Tells the agent to decline out-of-policy refunds plainly without pointing to a manager or invented alternative help, since staff powers are not in the store facts.",
+          "outcome": "Not clearly better: better in 4 cases, worse in 4, the same in 20."
+        }
+      ],
+      "plain": "Nothing was clearly better, so your prompt stayed the same.",
+      "scorePct": 100,
+      "failedChecks": {
+        "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.": 2
+      }
     }
   ],
   "candidateHistory": [
