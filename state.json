@@ -7,10 +7,10 @@
     "mergedHash": "87b5dd72b77ad71baacca519816a19aee5fcb8b48617c76293fbf6268077025f",
     "reverted": false
   },
-  "stalls": 3,
+  "stalls": 0,
   "spendUsd": 0.7031615999999999,
   "spendUnknown": false,
-  "stopped": "3 rounds in a row found no winner",
+  "stopped": null,
   "issue": 1,
   "scenariosHash": "4941ae8803d9e280e547d3e9e3c9de28d66a3d65418336124ae0cb69bbb5aa3f",
   "lessons": {
