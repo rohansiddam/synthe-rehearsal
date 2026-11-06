@@ -28,7 +28,7 @@
     "min_improvement": 2,
     "max_p": 0.05,
     "noise_margin": 3,
-    "max_rounds": 12,
+    "max_rounds": 14,
     "stall_rounds": 3,
     "guard_margin": 3
   },

@@ -13,7 +13,7 @@ jobs:
     permissions: { id-token: write }
     steps:
       - name: Record Crimson run completion
-        uses: synthelabs/synthe@v1.8.5
+        uses: synthelabs/synthe@v1.8.6
         with:
           github-token: ${{ github.token }}
           event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
