@@ -5,14 +5,15 @@
 <text x="30" y="28" text-anchor="end" font-size="12" fill="#8b949e">100</text>
 <text x="30" y="98" text-anchor="end" font-size="12" fill="#8b949e">50</text>
 <text x="30" y="168" text-anchor="end" font-size="12" fill="#8b949e">0</text>
-<polyline points="36,134.9 120,133.6 204,133.6 288,140.6 372,24 456,24 540,30 624,24" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<polyline points="36,134.9 109.5,133.6 183,133.6 256.5,140.6 330,24 403.5,24 477,30 550.5,24 624,24" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <circle cx="36" cy="134.9" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="120" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="204" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="288" cy="140.6" r="4.5" fill="#2f6feb" stroke="#2f6feb"/>
-<circle cx="372" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="456" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="540" cy="30" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="109.5" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="183" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="256.5" cy="140.6" r="4.5" fill="#2f6feb" stroke="#2f6feb"/>
+<circle cx="330" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="403.5" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="477" cy="30" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="550.5" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <circle cx="624" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <text x="36" y="125.9" text-anchor="middle" font-size="12" fill="#2f6feb">20.8%</text>
 <text x="624" y="42" text-anchor="middle" font-size="12" fill="#2f6feb">100%</text>
