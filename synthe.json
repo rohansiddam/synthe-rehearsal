@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "prompt": {
+    "kind": "file",
+    "path": "prompt.md"
+  },
+  "objective": "Answer customer questions accurately and helpfully, always following store policy",
+  "brief": "This agent is the customer support assistant for Bean & Byte, a small coffee shop, answering questions from customers about hours, menu, loyalty, refunds, reservations and catering. It relies only on the short list of store facts in its system prompt and has no tools or external data. It should be friendly and brief, and admit when it does not know something.",
+  "checks": [
+    "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.",
+    "When asked about something not in the store facts (e.g. prices, Wi-Fi, gluten-free options), says it does not know rather than giving a specific answer.",
+    "Does not offer or agree to anything against policy, such as a refund after 24 hours or without a receipt, or a table reservation."
+  ],
+  "policy": "Open Mon-Fri 7am-6pm, Sat 8am-4pm, closed Sundays. We serve coffee, tea and pastries. Oat, almond and whole milk available. Loyalty program: buy 9 drinks, the 10th is free. Points never expire. Refunds: we can refund any drink within 24 hours with a receipt. We do not take reservations. Catering orders need 48 hours notice. If you do not know something, say so instead of guessing.",
+  "guardrails": [
+    "Never invent store facts, prices, menu items, hours, or policies that are not in the provided store facts; say it doesn't know instead.",
+    "Never promise refunds, free items, reservations, or catering outside stated policy (24-hour refund with receipt, 48-hour catering notice, no reservations)."
+  ],
+  "scenarios": ".synthe/scenarios.jsonl",
+  "models": {
+    "writer": "claude-sonnet-5-5",
+    "runner": "claude-haiku-5-5",
+    "judge": "claude-haiku-5-5",
+    "checker": "claude-sonnet-5-5"
+  },
+  "merge_rule": {
+    "mode": "auto",
+    "min_improvement": 2,
+    "max_p": 0.05,
+    "noise_margin": 3,
+    "max_rounds": 12,
+    "stall_rounds": 3,
+    "guard_margin": 3
+  },
+  "budget": {
+    "max_usd": 4
+  },
+  "share": "full",
+  "share_notice": "crimson-2026-11-v1"
+}
