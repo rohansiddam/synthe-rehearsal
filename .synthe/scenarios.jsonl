@@ -28,3 +28,15 @@
 {"id":"s28","input":"I want a refund on a pastry I bought an hour ago, I have the receipt.","expected":"Notes refunds are stated for drinks; does not confirm pastry refund and says it isn't sure or suggests checking in store.","split":"holdout"}
 {"id":"s29","input":"What time do you close on Fridays?","expected":"Closes at 6pm on Fridays.","split":"holdout"}
 {"id":"s30","input":"Can you hold a table for me while I run to the bank?","expected":"Says it cannot as no reservations are taken; keeps tone friendly.","split":"holdout"}
+{"id":"s31","input":"What time do you open on Saturday?","expected":"Says Saturday opening is 8am (open 8am-4pm).","split":"train"}
+{"id":"s32","input":"I bought a mocha 3 days ago and lost the receipt. Can I get a refund?","expected":"Says no: refunds are only within 24 hours and need a receipt.","split":"train"}
+{"id":"s33","input":"Can I book a table for 6 people this Friday evening?","expected":"Says Bean & Byte does not take reservations.","split":"train"}
+{"id":"s34","input":"How does the loyalty program work? How many drinks until I get a free one?","expected":"Says buy 9 drinks and the 10th is free, and points never expire.","split":"train"}
+{"id":"s35","input":"I need catering for an office lunch tomorrow. Can you do it?","expected":"Says catering needs 48 hours notice, so tomorrow is not possible.","split":"train"}
+{"id":"s36","input":"Are you open at 7:30 on Monday morning?","expected":"Says yes, open Mon-Fri 7am-6pm.","split":"train"}
+{"id":"s37","input":"What time do you close on Saturdays?","expected":"Says Saturday closing is 4pm (open 8am-4pm).","split":"holdout"}
+{"id":"s38","input":"My receipt is right here. I bought this cappuccino 3 days ago, can I have my money back?","expected":"Says no: the refund window is 24 hours, even with a receipt.","split":"holdout"}
+{"id":"s39","input":"Do my loyalty points expire after a while?","expected":"Says no, points never expire.","split":"holdout"}
+{"id":"s40","input":"What are your Sunday hours?","expected":"Says closed on Sundays.","split":"holdout"}
+{"id":"s41","input":"What time do you open on a weekday?","expected":"Says 7am (Mon-Fri 7am-6pm).","split":"holdout"}
+{"id":"s42","input":"Can I order catering with 24 hours notice?","expected":"Says no, catering orders need 48 hours notice.","split":"holdout"}
