@@ -38,7 +38,7 @@
   },
   "pending": null,
   "proposal": null,
-  "chainReady": true,
+  "chainReady": false,
   "rounds": [
     {
       "round": 1,
