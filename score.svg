@@ -5,8 +5,9 @@
 <text x="30" y="28" text-anchor="end" font-size="12" fill="#8b949e">100</text>
 <text x="30" y="98" text-anchor="end" font-size="12" fill="#8b949e">50</text>
 <text x="30" y="168" text-anchor="end" font-size="12" fill="#8b949e">0</text>
-<polyline points="36,134.9 624,133.6" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<polyline points="36,134.9 330,133.6 624,133.6" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <circle cx="36" cy="134.9" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="330" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <circle cx="624" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <text x="36" y="125.9" text-anchor="middle" font-size="12" fill="#2f6feb">20.8%</text>
 <text x="624" y="124.6" text-anchor="middle" font-size="12" fill="#2f6feb">21.7%</text>
