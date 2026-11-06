@@ -29,7 +29,7 @@ jobs:
           persist-credentials: false
           ref: ${{ github.event.repository.default_branch }}
       - id: write
-        uses: synthelabs/synthe@v1
+        uses: synthelabs/synthe@feat/legibility
         with:
           step: write
           github-token: ${{ github.token }}
@@ -37,7 +37,7 @@ jobs:
           event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
           team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
       - if: ${{ cancelled() }}
-        uses: synthelabs/synthe@v1
+        uses: synthelabs/synthe@feat/legibility
         with: { step: cancel, github-token: "${{ github.token }}" }
       - uses: actions/upload-artifact@v4
         if: steps.write.outputs.go == 'true'
@@ -60,7 +60,7 @@ jobs:
           ref: ${{ github.event.repository.default_branch }}
       - uses: actions/download-artifact@v4
         with: { name: candidates, path: .synthe-out }
-      - uses: synthelabs/synthe@v1
+      - uses: synthelabs/synthe@feat/legibility
         with:
           step: score
           github-token: ${{ github.token }}
@@ -68,7 +68,7 @@ jobs:
           event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
           team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
       - if: ${{ cancelled() }}
-        uses: synthelabs/synthe@v1
+        uses: synthelabs/synthe@feat/legibility
         with: { step: cancel, github-token: "${{ github.token }}" }
       - uses: actions/upload-artifact@v4
         with: { name: scores, path: .synthe-out/scores.json, include-hidden-files: true }
@@ -88,7 +88,7 @@ jobs:
       - uses: actions/download-artifact@v4
         continue-on-error: true
         with: { path: .synthe-out, merge-multiple: true }
-      - uses: synthelabs/synthe@v1
+      - uses: synthelabs/synthe@feat/legibility
         with:
           step: decide
           github-token: ${{ github.token }}
