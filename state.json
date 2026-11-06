@@ -2,10 +2,10 @@
   "round": 3,
   "prompt": null,
   "lastMerge": null,
-  "stalls": 3,
+  "stalls": 0,
   "spendUsd": 0.10116039999999998,
   "spendUnknown": false,
-  "stopped": "3 rounds in a row found no winner",
+  "stopped": null,
   "issue": 1,
   "scenariosHash": "ca5c4839b697bb378acd0daa25f66c7e61369a21dbc53be3fcd17e73252513e7",
   "lessons": {
