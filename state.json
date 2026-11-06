@@ -6,17 +6,75 @@
   "spendUsd": 0.031858,
   "spendUnknown": false,
   "stopped": null,
-  "issue": null,
-  "scenariosHash": null,
-  "lessons": null,
-  "pending": {
-    "round": 1,
-    "at": "2026-11-06T01:04:37.227Z",
-    "costUsd": 0.031858
+  "issue": 1,
+  "scenariosHash": "ca5c4839b697bb378acd0daa25f66c7e61369a21dbc53be3fcd17e73252513e7",
+  "lessons": {
+    "promptHash": "454afdd4344be2a4d50cbf1e81a30f131bf03b872ec7c845f6a23a2b0cae06ef",
+    "rows": [
+      {
+        "id": "s2",
+        "reply": "Yes, you can get a refund for that latte. Refunds are available on any drink purchased within 24 hours, and you have your receipt. Just bring the receipt to the shop and our staff will take care of it. If you're not sure you're still within the 24-hour window, the time on your receipt will tell you.",
+        "better": "Refunds are only available within 24 hours of purchase, and they apply to drinks with a receipt. Since your latte was bought yesterday, it may already be past that window depending on the time you bought it. I'd recommend coming in as soon as possible with your receipt to check with our staff. I'm sorry I can't confirm more than that from here.",
+        "violation": true
+      },
+      {
+        "id": "s6",
+        "reply": "I'm sorry, we don't currently offer soy milk. Our options are oat, almond and whole milk. Is there anything else I can help you with?",
+        "better": "I'm not sure about soy milk. We offer oat, almond and whole milk, but I don't have information on soy. Please ask our staff when you visit, or check with the shop directly.",
+        "violation": true
+      },
+      {
+        "id": "s7",
+        "reply": "Unfortunately, we don't take table reservations. Seating is first come, first served. We're open Friday 7am to 6pm, so you'd be able to visit during that window. If you're planning a larger group gathering, we also take catering orders with 48 hours' notice, which might be a good option for you.",
+        "violation": true
+      },
+      {
+        "id": "s8",
+        "reply": "Happy to help with catering for 30 people! One important note: catering orders require 48 hours' notice, so an order for tomorrow morning may not be possible. Could you tell me the date you're hoping for? I can help you plan the order from there.\n\nIf you'd like to confirm whether a faster arrangement is possible, the shop team would be the best people to ask directly.",
+        "better": "Thanks for reaching out! Catering orders need 48 hours' notice, so we unfortunately can't fulfil an order for tomorrow morning. If you can place your order at least 48 hours before your event, we'd be happy to help with it.\n\nIf you're short on time, you could visit the shop or ask our staff in store about any options for a smaller or quicker order. They'll be able to advise you directly.",
+        "violation": true
+      },
+      {
+        "id": "s9",
+        "reply": "I'm sorry to hear about the muffin. Unfortunately, our refund policy covers drinks only if they're requested within 24 hours with a receipt, so I'm not able to offer a refund for a muffin bought 3 days ago without a receipt.\n\nIf you'd like, you can stop by the shop or reach out to our team directly, and they can take a look at your situation. Is there anything else I can help you with?",
+        "better": "I'm sorry, but I can't offer a refund here. Refunds are only available for drinks, within 24 hours of purchase, and with a receipt. Since the muffin was bought 3 days ago and is a pastry, it doesn't qualify.\n\nIf you have any other questions, like our hours or the loyalty program, I'm happy to help. For anything else, feel free to stop in and ask our staff directly.",
+        "violation": true
+      },
+      {
+        "id": "s17",
+        "reply": "I'm sorry, we don't serve breakfast sandwiches. We offer coffee, tea and pastries, with oat, almond and whole milk available for your drinks. Is there anything from that menu I can help you with?",
+        "better": "I'm not sure about that one. Our menu covers coffee, tea and pastries, but I don't have details on breakfast sandwiches. Please ask our staff when you visit, or check with us directly. We're open Monday to Friday 7am-6pm and Saturday 8am-4pm, closed Sundays.",
+        "violation": true
+      }
+    ]
   },
+  "pending": null,
   "proposal": null,
-  "chainReady": false,
-  "rounds": [],
+  "chainReady": true,
+  "rounds": [
+    {
+      "round": 1,
+      "at": "2026-11-06T01:04:37.227Z",
+      "outcome": "skipped",
+      "reasons": [
+        "candidate-1: better in 3 and worse in 1 test cases, which could be luck",
+        "candidate-2: better in 5 and worse in 2 test cases, which could be luck"
+      ],
+      "costUsd": 0.031858,
+      "writeUsd": 0.015126,
+      "tried": [
+        {
+          "summary": "Adds explicit rules for unknown items, strict refund and catering limits, and loyalty counting so the agent stops guessing or bending policy.",
+          "outcome": "Not clearly better: better in 3 cases and worse in 1, which could be luck."
+        },
+        {
+          "summary": "Clarifies the refund rule as drinks only, 24 hours, receipt required, and makes the don't-know instruction specific so the agent declines unknown topics and off-policy requests.",
+          "outcome": "Not clearly better: better in 5 cases and worse in 2, which could be luck."
+        }
+      ],
+      "plain": "Nothing was clearly better, so your prompt stayed the same."
+    }
+  ],
   "candidateHistory": [
     {
       "scope": "e87aa36a27af8156f27dfb28e6b4db7573274165864adc5df3f866d3578f016f",
