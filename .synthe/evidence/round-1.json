@@ -1,0 +1,298 @@
+{
+  "round": 1,
+  "promptHashBefore": "454afdd4344be2a4d50cbf1e81a30f131bf03b872ec7c845f6a23a2b0cae06ef",
+  "promptHashAfter": "454afdd4344be2a4d50cbf1e81a30f131bf03b872ec7c845f6a23a2b0cae06ef",
+  "verdict": "skip",
+  "verdictReasons": [
+    "candidate-1: better in 3 and worse in 1 test cases, which could be luck",
+    "candidate-2: better in 5 and worse in 2 test cases, which could be luck"
+  ],
+  "candidateId": "candidate-2",
+  "commit": "ca0aea794c82f877c4a590e15c35e2f1f85bb976",
+  "mergeMode": "auto",
+  "modelIds": {
+    "writer": "claude-sonnet-5-5",
+    "runner": "claude-haiku-5-5",
+    "judge": "claude-haiku-5-5",
+    "checker": "claude-sonnet-5-5"
+  },
+  "scenarioScores": [
+    {
+      "id": "s1",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s2",
+      "baselineScore": 50,
+      "candidateScore": 100,
+      "checkFailed": 0,
+      "checkApplicable": 2,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 2,
+      "guardFailed": 0,
+      "baselineGuardFailed": 1
+    },
+    {
+      "id": "s3",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s4",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s5",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 0,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s6",
+      "baselineScore": 50,
+      "candidateScore": 100,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 0,
+      "guardFailed": 0,
+      "baselineGuardFailed": 1
+    },
+    {
+      "id": "s7",
+      "baselineScore": 50,
+      "candidateScore": 0,
+      "checkFailed": 0,
+      "checkApplicable": 2,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 2,
+      "guardFailed": 1,
+      "baselineGuardFailed": 1
+    },
+    {
+      "id": "s8",
+      "baselineScore": 50,
+      "candidateScore": 100,
+      "checkFailed": 0,
+      "checkApplicable": 2,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 2,
+      "guardFailed": 0,
+      "baselineGuardFailed": 1
+    },
+    {
+      "id": "s9",
+      "baselineScore": 50,
+      "candidateScore": 100,
+      "checkFailed": 0,
+      "checkApplicable": 2,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 2,
+      "guardFailed": 0,
+      "baselineGuardFailed": 1
+    },
+    {
+      "id": "s10",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s11",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s12",
+      "baselineScore": 50,
+      "candidateScore": 0,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s13",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s14",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s15",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 2,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 2,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s16",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s17",
+      "baselineScore": 50,
+      "candidateScore": 100,
+      "checkFailed": 0,
+      "checkApplicable": 2,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 1
+    },
+    {
+      "id": "s18",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 2,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s19",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 1,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 1,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s20",
+      "baselineScore": 50,
+      "candidateScore": 50,
+      "checkFailed": 0,
+      "checkApplicable": 2,
+      "baselineCheckFailed": 0,
+      "baselineCheckApplicable": 2,
+      "guardFailed": 0,
+      "baselineGuardFailed": 0
+    },
+    {
+      "id": "s21",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s22",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s23",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s24",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s25",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s26",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s27",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s28",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s29",
+      "baselineScore": 50,
+      "candidateScore": null
+    },
+    {
+      "id": "s30",
+      "baselineScore": 50,
+      "candidateScore": null
+    }
+  ],
+  "checksBefore": null,
+  "checksAfter": null,
+  "guardsBefore": null,
+  "guardsAfter": 95,
+  "costUsd": 0.031858,
+  "prevEvidenceHash": null,
+  "sha256": "c96a9f4d8711f7f2427120390ff75432ee176f508b9f4fb3385d72b834880e5d"
+}
