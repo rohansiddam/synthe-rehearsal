@@ -12,42 +12,51 @@
   "spendUnknown": false,
   "stopped": null,
   "issue": 1,
-  "scenariosHash": "4941ae8803d9e280e547d3e9e3c9de28d66a3d65418336124ae0cb69bbb5aa3f",
+  "scenariosHash": "99138a9218968708a49858dd842cbc2117464f2a285e9673a232bb33cd09e47a",
   "lessons": {
     "promptHash": "87b5dd72b77ad71baacca519816a19aee5fcb8b48617c76293fbf6268077025f",
     "rows": [
       {
-        "id": "s2",
-        "reply": "Yes, you can get a refund for that latte. Drink refunds are available within 24 hours of purchase when you have your receipt, so as long as you bring it in, you're covered. If you let me know the store location or ask at the counter, the staff can process it for you.",
-        "better": "Yes, drink refunds are available within 24 hours of purchase with a receipt. Since you bought the latte yesterday and have your receipt, you should be eligible. Please bring the receipt in to the shop to request the refund.",
-        "violation": true
-      },
-      {
-        "id": "s7",
-        "reply": "Sorry, we don't take table reservations. Seating is first come, first served. We're open Friday 7am to 6pm, so if you plan to visit, arriving a little early may help. If you're planning a larger group gathering, we can take catering orders with 48 hours' notice.",
-        "violation": true
-      },
-      {
-        "id": "s8",
-        "reply": "I'm sorry, but we need 48 hours' notice for catering orders, so we can't take a catering order for tomorrow morning. If you contact us with your date at least 48 hours ahead, we'd be happy to help arrange it for 30 people.\n\nIf you need something sooner, you're welcome to visit us in person, and we're happy to help with drinks and pastries for your group during regular hours. Our hours are Mon-Fri 7am-6pm and Sat 8am-4pm (closed Sundays). Is there anything else I can help you with?",
-        "better": "Catering orders need 48 hours' notice, so we can't fulfill an order for tomorrow morning. If you'd like to plan ahead, you're welcome to place a catering order for a date at least 48 hours from now.",
+        "id": "s15",
+        "reply": "I'm sorry your coffee arrived cold. Unfortunately, refunds are only available within 24 hours of purchase, so a drink bought 2 days ago isn't eligible, even with the receipt.\n\nI'd still recommend speaking with a manager at the shop, since they may be able to help with the situation in other ways. We're open Monday to Friday 7am to 6pm and Saturday 8am to 4pm (closed Sundays). If you'd like, I can also tell you about our loyalty program, which gives you a free drink after every 9 you buy.",
+        "better": "I'm sorry your coffee was cold. Our refund policy covers drinks only, and only within 24 hours of purchase with a receipt. Since your purchase was 2 days ago, it falls outside that window, so I'm not able to offer a refund.",
         "violation": true
       },
       {
         "id": "s16",
-        "reply": "Not quite yet, but you're close! Our loyalty program gives you a free drink on your 10th purchase, so you need just 2 more drinks to earn it. Points never expire, so your progress will be there whenever you're ready to come back.",
-        "better": "Not quite yet, but you're close! Our loyalty program gives you a free drink after you buy 9 drinks, so one more purchase will earn it. Your points never expire, so you can take your time.",
+        "reply": "Not quite yet, but you're close! Our loyalty program gives you a free drink on your 10th purchase, so one more drink after your 8th and then one more after that will get you there. Your points never expire, so you can take your time. Anything else I can help with?",
+        "better": "Almost! With 8 drinks on your card, you need one more paid drink to reach 9. Then your 10th drink is free. Points never expire, so you can keep building toward it whenever you're in.",
         "violation": true
+      },
+      {
+        "id": "s1",
+        "reply": "We close at 4pm on Saturdays. We're open from 8am that day. Is there anything else I can help you with?",
+        "better": "We close at 4pm on Saturdays. We're open 8am to 4pm that day. Is there anything else I can help you with?",
+        "violation": false
+      },
+      {
+        "id": "s3",
+        "reply": "No, loyalty points never expire. Once you earn them, they stay on your account.",
+        "better": "No, loyalty points never expire. Once you've bought 9 drinks, your 10th is free.",
+        "violation": false
+      },
+      {
+        "id": "s7",
+        "reply": "Unfortunately, we don't take table reservations. We operate on a first come, first served basis. We're open Friday 7am-6pm, so you're welcome to come in and grab a table when you arrive.\n\nIf you're planning a larger group gathering, we do take catering orders with 48 hours' notice. Is there anything else I can help you with?",
+        "better": "Sorry, we don't take table reservations. We operate on a first come, first served basis. Our Friday hours are 7am to 6pm, so you're welcome to come in and grab a seat when you arrive. If you're planning a larger group visit, you might want to come in earlier in the day when it may be less busy.",
+        "violation": false
+      },
+      {
+        "id": "s34",
+        "reply": "Our loyalty program works like this: buy 9 drinks, and your 10th drink is free. Points never expire, so your progress will be there whenever you come back.",
+        "better": "Our loyalty program works like this: buy 9 drinks and the 10th is free. Points never expire, so your progress stays put even if it's been a while since your last visit.\n\nSo you'd need 9 paid drinks before your next one is free. If you've already bought some, let us know how many and I can tell you how many more you'd need.",
+        "violation": false
       }
     ]
   },
-  "pending": {
-    "round": 11,
-    "at": "2026-11-06T23:03:14.917Z",
-    "costUsd": 0.0649146
-  },
+  "pending": null,
   "proposal": null,
-  "chainReady": false,
+  "chainReady": true,
   "rounds": [
     {
       "round": 1,
@@ -363,6 +372,29 @@
       "failedChecks": {
         "States hours, loyalty rules, refund window, or catering notice exactly as in the store facts (e.g. Saturday 8am-4pm, refund within 24 hours with receipt, 48 hours catering notice) with no contradicting numbers.": 1
       }
+    },
+    {
+      "round": 11,
+      "at": "2026-11-06T23:03:14.917Z",
+      "outcome": "skipped",
+      "reasons": [
+        "candidate-1: judge score 30.4, needs 52.0 (50 is even)",
+        "candidate-2: judge score 50.0, needs 52.0 (50 is even)"
+      ],
+      "costUsd": 0.0649146,
+      "writeUsd": 0.022458,
+      "tried": [
+        {
+          "summary": "Adds rules to avoid invented steps, correct loyalty counting (8 drinks needs 1 more), and avoid unrequested extras.",
+          "outcome": "Not clearly better: better in 3 cases, worse in 14, the same in 11."
+        },
+        {
+          "summary": "Spells out the loyalty counting so someone with 8 drinks is told one more purchase earns the free drink, not two.",
+          "outcome": "Not clearly better: better in 4 cases, worse in 4, the same in 20."
+        }
+      ],
+      "plain": "Nothing was clearly better, so your prompt stayed the same.",
+      "scorePct": 100
     }
   ],
   "candidateHistory": [
