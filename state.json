@@ -1,9 +1,9 @@
 {
-  "round": 2,
+  "round": 3,
   "prompt": null,
   "lastMerge": null,
-  "stalls": 2,
-  "spendUsd": 0.0724682,
+  "stalls": 3,
+  "spendUsd": 0.10116039999999998,
   "spendUnknown": false,
   "stopped": null,
   "issue": 1,
@@ -36,7 +36,11 @@
       }
     ]
   },
-  "pending": null,
+  "pending": {
+    "round": 3,
+    "at": "2026-11-06T09:37:16.018Z",
+    "costUsd": 0.028692199999999994
+  },
   "proposal": null,
   "chainReady": false,
   "rounds": [
@@ -101,6 +105,10 @@
     {
       "scope": "e87aa36a27af8156f27dfb28e6b4db7573274165864adc5df3f866d3578f016f",
       "fingerprint": "0a22c5770d99388c92b73408b0421bcf6243cc718b33c30c55a4d249a86799a3"
+    },
+    {
+      "scope": "611bbaa83e27f0234a9f8423ffab8f15b2a7d6625807591e960d6d3636de9ba6",
+      "fingerprint": "cb5dc67a07f21a6c33451fb1957b04e7140585600f01a77c25bca0453c1bf74f"
     }
   ],
   "evidenceHash": "73a9e74bbba37156a42dd29d49160254acb90f3213419b456f77b93c183a5674"
