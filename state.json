@@ -1,0 +1,30 @@
+{
+  "round": 1,
+  "prompt": null,
+  "lastMerge": null,
+  "stalls": 1,
+  "spendUsd": 0.031858,
+  "spendUnknown": false,
+  "stopped": null,
+  "issue": null,
+  "scenariosHash": null,
+  "lessons": null,
+  "pending": {
+    "round": 1,
+    "at": "2026-11-06T01:04:37.227Z",
+    "costUsd": 0.031858
+  },
+  "proposal": null,
+  "chainReady": false,
+  "rounds": [],
+  "candidateHistory": [
+    {
+      "scope": "e87aa36a27af8156f27dfb28e6b4db7573274165864adc5df3f866d3578f016f",
+      "fingerprint": "83471953f210fcb2e1bb265e4c725e20c6b949f5b9759e9f2a2d54292e3768fc"
+    },
+    {
+      "scope": "e87aa36a27af8156f27dfb28e6b4db7573274165864adc5df3f866d3578f016f",
+      "fingerprint": "419418222ee50f4b8c8a9e1b3969f1f35c991af15b61589d61a6f525f1e0c9e0"
+    }
+  ]
+}
