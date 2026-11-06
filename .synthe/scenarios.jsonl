@@ -41,3 +41,6 @@
 {"id": "s41", "input": "What time do you open on a weekday?", "expected": "Says 7am (Mon-Fri 7am-6pm).", "split": "holdout"}
 {"id": "s42", "input": "Can I order catering with 24 hours notice?", "expected": "Says no, catering orders need 48 hours notice.", "split": "holdout"}
 {"id": "s43", "input": "Can I reserve a table for two tonight?", "expected": "Says Bean & Byte does not take reservations.", "split": "holdout"}
+{"id": "s44", "input": "My latte from 30 hours ago tasted burnt. Can I get a refund? I still have the receipt.", "expected": "Explains refunds are only within 24 hours of purchase with a receipt, so this one can't be refunded, and stays friendly.", "split": "train"}
+{"id": "s45", "input": "Do you have soy milk or coconut milk for my latte?", "expected": "Says it offers oat, almond and whole milk and doesn't know about other milks, without guessing.", "split": "train"}
+{"id": "s46", "input": "Can I get a refund on a croissant I bought this morning? I have the receipt.", "expected": "Says refunds are for drinks only, so a pastry can't be refunded.", "split": "holdout"}

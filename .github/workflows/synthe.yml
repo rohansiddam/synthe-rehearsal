@@ -27,7 +27,7 @@ jobs:
     steps:
       - name: Record Crimson run start
         id: crimson_receipt
-        uses: synthelabs/synthe@v1.8.2
+        uses: synthelabs/synthe@v1.8.5
         with:
           github-token: ${{ github.token }}
           event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
@@ -38,7 +38,7 @@ jobs:
           persist-credentials: false
           ref: ${{ github.event.repository.default_branch }}
       - id: write
-        uses: synthelabs/synthe@v1.8.2
+        uses: synthelabs/synthe@v1.8.5
         with:
           step: write
           github-token: ${{ github.token }}
@@ -46,7 +46,7 @@ jobs:
           event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
           team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
       - if: ${{ cancelled() }}
-        uses: synthelabs/synthe@v1.8.2
+        uses: synthelabs/synthe@v1.8.5
         with: { step: cancel, github-token: "${{ github.token }}" }
       - uses: actions/upload-artifact@v4
         if: steps.write.outputs.go == 'true'
@@ -66,7 +66,7 @@ jobs:
       - name: Record Crimson run start
         id: crimson_receipt
         if: github.run_attempt != '1'
-        uses: synthelabs/synthe@v1.8.2
+        uses: synthelabs/synthe@v1.8.5
         with:
           github-token: ${{ github.token }}
           event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
@@ -78,7 +78,7 @@ jobs:
           ref: ${{ github.event.repository.default_branch }}
       - uses: actions/download-artifact@v4
         with: { name: candidates, path: .synthe-out }
-      - uses: synthelabs/synthe@v1.8.2
+      - uses: synthelabs/synthe@v1.8.5
         with:
           step: score
           github-token: ${{ github.token }}
@@ -86,7 +86,7 @@ jobs:
           event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
           team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
       - if: ${{ cancelled() }}
-        uses: synthelabs/synthe@v1.8.2
+        uses: synthelabs/synthe@v1.8.5
         with: { step: cancel, github-token: "${{ github.token }}" }
       - uses: actions/upload-artifact@v4
         with: { name: scores, path: .synthe-out/scores.json, include-hidden-files: true }
@@ -106,7 +106,7 @@ jobs:
       - name: Record Crimson run start
         id: crimson_receipt
         if: github.run_attempt != '1'
-        uses: synthelabs/synthe@v1.8.2
+        uses: synthelabs/synthe@v1.8.5
         with:
           github-token: ${{ github.token }}
           event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
@@ -115,7 +115,23 @@ jobs:
       - uses: actions/download-artifact@v4
         continue-on-error: true
         with: { path: .synthe-out, merge-multiple: true }
-      - uses: synthelabs/synthe@v1.8.2
+      - uses: synthelabs/synthe@v1.8.5
         with:
           step: decide
           github-token: ${{ github.token }}
+  finish:
+    needs: [write, score, decide]
+    if: ${{ always() && needs.write.result != 'skipped' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    continue-on-error: true
+    permissions: { id-token: write }
+    steps:
+      - name: Record Crimson run finish
+        uses: synthelabs/synthe@v1.8.5
+        with:
+          github-token: ${{ github.token }}
+          event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
+          team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
+          step: receipt-finish
+          conclusion: ${{ contains(needs.*.result, 'cancelled') && 'cancelled' || contains(needs.*.result, 'failure') && 'failure' || 'success' }}
