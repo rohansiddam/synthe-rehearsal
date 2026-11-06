@@ -7,10 +7,10 @@
     "mergedHash": "87b5dd72b77ad71baacca519816a19aee5fcb8b48617c76293fbf6268077025f",
     "reverted": false
   },
-  "stalls": 2,
+  "stalls": 0,
   "spendUsd": 0.8333265000000001,
   "spendUnknown": false,
-  "stopped": "reached 12 rounds",
+  "stopped": null,
   "issue": 1,
   "scenariosHash": "99138a9218968708a49858dd842cbc2117464f2a285e9673a232bb33cd09e47a",
   "lessons": {
