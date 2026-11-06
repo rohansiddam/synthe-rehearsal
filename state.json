@@ -13,46 +13,30 @@
     "rows": [
       {
         "id": "s2",
-        "reply": "Yes, you can get a refund for that latte. Refunds are available on any drink purchased within 24 hours, and you have your receipt. Just bring the receipt to the shop and our staff will take care of it. If you're not sure you're still within the 24-hour window, the time on your receipt will tell you.",
-        "better": "Refunds are only available within 24 hours of purchase, and they apply to drinks with a receipt. Since your latte was bought yesterday, it may already be past that window depending on the time you bought it. I'd recommend coming in as soon as possible with your receipt to check with our staff. I'm sorry I can't confirm more than that from here.",
+        "reply": "Yes, you can get a refund for that latte. We refund any drink within 24 hours with a receipt, and since you bought it yesterday and have the receipt, you should be within the window. If it's been more than 24 hours since you purchased it, let me know and I can point you in the right direction. Please bring the receipt to the shop, and our staff will take care of the refund for you.",
         "violation": true
       },
       {
         "id": "s6",
-        "reply": "I'm sorry, we don't currently offer soy milk. Our options are oat, almond and whole milk. Is there anything else I can help you with?",
-        "better": "I'm not sure about soy milk. We offer oat, almond and whole milk, but I don't have information on soy. Please ask our staff when you visit, or check with the shop directly.",
+        "reply": "I'm sorry, we don't currently offer soy milk. Our milk options are oat, almond and whole milk. Is there anything else I can help you with?",
+        "better": "I'm not sure whether we carry soy milk, as I don't have that information. Our listed milk options are oat, almond and whole milk. For a definite answer, please ask our staff when you visit the shop.",
         "violation": true
       },
       {
-        "id": "s7",
-        "reply": "Unfortunately, we don't take table reservations. Seating is first come, first served. We're open Friday 7am to 6pm, so you'd be able to visit during that window. If you're planning a larger group gathering, we also take catering orders with 48 hours' notice, which might be a good option for you.",
-        "violation": true
-      },
-      {
-        "id": "s8",
-        "reply": "Happy to help with catering for 30 people! One important note: catering orders require 48 hours' notice, so an order for tomorrow morning may not be possible. Could you tell me the date you're hoping for? I can help you plan the order from there.\n\nIf you'd like to confirm whether a faster arrangement is possible, the shop team would be the best people to ask directly.",
-        "better": "Thanks for reaching out! Catering orders need 48 hours' notice, so we unfortunately can't fulfil an order for tomorrow morning. If you can place your order at least 48 hours before your event, we'd be happy to help with it.\n\nIf you're short on time, you could visit the shop or ask our staff in store about any options for a smaller or quicker order. They'll be able to advise you directly.",
-        "violation": true
-      },
-      {
-        "id": "s9",
-        "reply": "I'm sorry to hear about the muffin. Unfortunately, our refund policy covers drinks only if they're requested within 24 hours with a receipt, so I'm not able to offer a refund for a muffin bought 3 days ago without a receipt.\n\nIf you'd like, you can stop by the shop or reach out to our team directly, and they can take a look at your situation. Is there anything else I can help you with?",
-        "better": "I'm sorry, but I can't offer a refund here. Refunds are only available for drinks, within 24 hours of purchase, and with a receipt. Since the muffin was bought 3 days ago and is a pastry, it doesn't qualify.\n\nIf you have any other questions, like our hours or the loyalty program, I'm happy to help. For anything else, feel free to stop in and ask our staff directly.",
+        "id": "s15",
+        "reply": "I'm sorry your coffee arrived cold. Unfortunately, our refund window is 24 hours from purchase, and since your drink was bought 2 days ago, I'm not able to offer a refund under our policy.\n\nI'd still like to help. Please reach out to the shop directly, since staff may be able to make it right in other ways. If you'd like, you can also come in and let us know how your drink was, so we can make sure the next one is hot.",
+        "better": "I'm sorry your coffee arrived cold. Our refund policy covers drinks within 24 hours of purchase with a receipt. Since you bought it 2 days ago, it's likely past that window, so I can't confirm a refund. I'd still recommend coming in soon with your receipt so our staff can look into it for you. Is there anything else I can help with?",
         "violation": true
       },
       {
         "id": "s17",
-        "reply": "I'm sorry, we don't serve breakfast sandwiches. We offer coffee, tea and pastries, with oat, almond and whole milk available for your drinks. Is there anything from that menu I can help you with?",
-        "better": "I'm not sure about that one. Our menu covers coffee, tea and pastries, but I don't have details on breakfast sandwiches. Please ask our staff when you visit, or check with us directly. We're open Monday to Friday 7am-6pm and Saturday 8am-4pm, closed Sundays.",
+        "reply": "I'm sorry, we don't have breakfast sandwiches on our menu. We serve coffee, tea and pastries, along with oat, almond and whole milk options. Is there anything from those you'd like to know more about?",
+        "better": "I'm not sure about breakfast sandwiches, as I don't have that information. Our menu details I can share are coffee, tea, and pastries, with oat, almond, and whole milk options. For the full menu, please ask our staff when you're in the shop.",
         "violation": true
       }
     ]
   },
-  "pending": {
-    "round": 2,
-    "at": "2026-11-06T01:06:04.462Z",
-    "costUsd": 0.0406102
-  },
+  "pending": null,
   "proposal": null,
   "chainReady": true,
   "rounds": [
@@ -74,6 +58,28 @@
         {
           "summary": "Clarifies the refund rule as drinks only, 24 hours, receipt required, and makes the don't-know instruction specific so the agent declines unknown topics and off-policy requests.",
           "outcome": "Not clearly better: better in 5 cases and worse in 2, which could be luck."
+        }
+      ],
+      "plain": "Nothing was clearly better, so your prompt stayed the same."
+    },
+    {
+      "round": 2,
+      "at": "2026-11-06T01:06:04.462Z",
+      "outcome": "skipped",
+      "reasons": [
+        "candidate-1: judge score 45.0, needs 52.0 (50 is even)",
+        "candidate-2: judge score 47.5, needs 52.0 (50 is even)"
+      ],
+      "costUsd": 0.0406102,
+      "writeUsd": 0.02345,
+      "tried": [
+        {
+          "summary": "Makes the agent say it's unsure about unlisted items instead of denying them, and stops it from confirming refunds or hinting at exceptions.",
+          "outcome": "Not clearly better: better in 3 cases, worse in 5, the same in 12."
+        },
+        {
+          "summary": "Replaces the vague don't-know line with a specific rule to say 'not sure' for unlisted items and to avoid confirming refunds for purchases from yesterday or earlier.",
+          "outcome": "Not clearly better: better in 2 cases, worse in 3, the same in 15."
         }
       ],
       "plain": "Nothing was clearly better, so your prompt stayed the same."
