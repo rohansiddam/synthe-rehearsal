@@ -5,18 +5,19 @@
 <text x="30" y="28" text-anchor="end" font-size="12" fill="#8b949e">100</text>
 <text x="30" y="98" text-anchor="end" font-size="12" fill="#8b949e">50</text>
 <text x="30" y="168" text-anchor="end" font-size="12" fill="#8b949e">0</text>
-<polyline points="36,134.9 89.5,133.6 142.9,133.6 196.4,140.6 249.8,24 303.3,24 356.7,30 410.2,24 463.6,24 517.1,24 570.5,24 624,24" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<polyline points="36,134.9 85,133.6 134,133.6 183,140.6 232,24 281,24 330,30 379,24 428,24 477,24 526,24 575,24 624,24" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <circle cx="36" cy="134.9" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="89.5" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="142.9" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="196.4" cy="140.6" r="4.5" fill="#2f6feb" stroke="#2f6feb"/>
-<circle cx="249.8" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="303.3" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="356.7" cy="30" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="410.2" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="463.6" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="517.1" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
-<circle cx="570.5" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="85" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="134" cy="133.6" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="183" cy="140.6" r="4.5" fill="#2f6feb" stroke="#2f6feb"/>
+<circle cx="232" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="281" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="330" cy="30" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="379" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="428" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="477" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="526" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
+<circle cx="575" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <circle cx="624" cy="24" r="4.5" fill="none" stroke="#2f6feb" stroke-width="2"/>
 <text x="36" y="125.9" text-anchor="middle" font-size="12" fill="#2f6feb">20.8%</text>
 <text x="624" y="42" text-anchor="middle" font-size="12" fill="#2f6feb">100%</text>
