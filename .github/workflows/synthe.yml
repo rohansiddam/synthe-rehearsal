@@ -6,7 +6,7 @@ on:
     types: [closed]
   schedule:
     # Hourly backup if a chained dispatch is missed. Init picks one minute away from the top of the hour.
-    - cron: "39 * * * *"
+    - cron: "17 * * * *"
 concurrency:
   # Ignore unrelated PR closes without letting them replace a pending chained round. Synthe's own setup and round
   # pull requests share the group: merging setup starts round 1, closing a proposal resumes review mode.
@@ -23,30 +23,19 @@ jobs:
     permissions: { contents: read, pull-requests: read, id-token: write }
     outputs:
       go: ${{ steps.write.outputs.go }}
-      receipt: ${{ steps.crimson_receipt.outcome }}
     steps:
-      - name: Record Crimson run start
-        id: crimson_receipt
-        uses: synthelabs/synthe@v1.8.6
-        with:
-          github-token: ${{ github.token }}
-          event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
-          team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
-          step: receipt-start
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
           ref: ${{ github.event.repository.default_branch }}
       - id: write
-        uses: synthelabs/synthe@v1.8.6
+        uses: synthelabs/synthe@v1.10.0
         with:
           step: write
           github-token: ${{ github.token }}
-          anthropic-api-key: ${{ secrets.SYNTHE_ANTHROPIC_KEY }}
-          event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
-          team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
+          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
       - if: ${{ cancelled() }}
-        uses: synthelabs/synthe@v1.8.6
+        uses: synthelabs/synthe@v1.10.0
         with: { step: cancel, github-token: "${{ github.token }}" }
       - uses: actions/upload-artifact@v4
         if: steps.write.outputs.go == 'true'
@@ -63,30 +52,19 @@ jobs:
     timeout-minutes: 15
     permissions: { contents: read, id-token: write }
     steps:
-      - name: Record Crimson run start
-        id: crimson_receipt
-        if: github.run_attempt != '1'
-        uses: synthelabs/synthe@v1.8.6
-        with:
-          github-token: ${{ github.token }}
-          event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
-          team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
-          step: receipt-start
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
           ref: ${{ github.event.repository.default_branch }}
       - uses: actions/download-artifact@v4
         with: { name: candidates, path: .synthe-out }
-      - uses: synthelabs/synthe@v1.8.6
+      - uses: synthelabs/synthe@v1.10.0
         with:
           step: score
           github-token: ${{ github.token }}
-          anthropic-api-key: ${{ secrets.SYNTHE_ANTHROPIC_KEY }}
-          event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
-          team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
+          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
       - if: ${{ cancelled() }}
-        uses: synthelabs/synthe@v1.8.6
+        uses: synthelabs/synthe@v1.10.0
         with: { step: cancel, github-token: "${{ github.token }}" }
       - uses: actions/upload-artifact@v4
         with: { name: scores, path: .synthe-out/scores.json, include-hidden-files: true }
@@ -96,42 +74,17 @@ jobs:
   decide:
     needs: [write, score]
     # Wrapped in ${{ }}: in YAML a bare leading ! is a tag, which would silently drop the !cancelled() check.
-    if: ${{ !cancelled() && needs.write.result != 'skipped' && needs.write.outputs.go != 'false' && needs.write.outputs.receipt == 'success' }}
+    if: ${{ !cancelled() && needs.write.result != 'skipped' && needs.write.outputs.go != 'false' }}
     runs-on: ubuntu-latest
     # Only GitHub calls, each retried for at most a minute when rate-limited.
     timeout-minutes: 10
     # The only job that can write. It holds no model key and never checks out or runs repo code.
     permissions: { contents: write, pull-requests: write, issues: write, actions: write, id-token: write }
     steps:
-      - name: Record Crimson run start
-        id: crimson_receipt
-        if: github.run_attempt != '1'
-        uses: synthelabs/synthe@v1.8.6
-        with:
-          github-token: ${{ github.token }}
-          event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
-          team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
-          step: receipt-start
       - uses: actions/download-artifact@v4
         continue-on-error: true
         with: { path: .synthe-out, merge-multiple: true }
-      - uses: synthelabs/synthe@v1.8.6
+      - uses: synthelabs/synthe@v1.10.0
         with:
           step: decide
           github-token: ${{ github.token }}
-  finish:
-    needs: [write, score, decide]
-    if: ${{ always() && needs.write.result != 'skipped' }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 2
-    continue-on-error: true
-    permissions: { id-token: write }
-    steps:
-      - name: Record Crimson run finish
-        uses: synthelabs/synthe@v1.8.6
-        with:
-          github-token: ${{ github.token }}
-          event-code: ${{ secrets.SYNTHE_EVENT_CODE }}
-          team-code: ${{ secrets.SYNTHE_TEAM_CODE }}
-          step: receipt-finish
-          conclusion: ${{ contains(needs.*.result, 'cancelled') && 'cancelled' || contains(needs.*.result, 'failure') && 'failure' || 'success' }}
